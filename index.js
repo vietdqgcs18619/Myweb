@@ -303,6 +303,31 @@ function deleteAccount(req,res)
     res.redirect('/account');
 }
 
+app.get('/admin/delete', deleteProduct);
+function deleteProduct(req,res)
+{
+    var dssp = req.query.product;
+    MongoClient.connect(uri, { useUnifiedTopology: true })
+    .then (client => {
+    var dbo = client.db(NameDataBase);
+    var id = dssp;// se thay doi o day
+        var query = {
+        _id : ObjectId(id)
+    };
+
+    dbo.collection("Products").deleteOne(query)
+        .then (result => {
+            //ahha
+            console.log("deleted");
+            client.close();
+        })
+        .catch(error => console.error(error));
+    })
+    .catch(error => console.error(error)); 
+
+    res.redirect('/admin');
+}
+
 
 
 /// ***************** ***************** *****************
@@ -328,6 +353,30 @@ app.post('/register', function (req, res) {
     console.log(body);
 
     res.redirect('/');
+    
+});
+
+app.post('/admin/new', function (req, res) {
+    var body = req.body;
+    
+        /// --------------------Insert-------------------------
+    MongoClient.connect(uri, { useUnifiedTopology: true })
+    .then (client => {
+    var dbo = client.db(NameDataBase);
+    
+    dbo.collection("Products").insertOne(body)
+        .then (result => {
+            console.log(result);
+            client.close();
+        })
+        .catch(error => console.error(error));
+    })
+    .catch(error => console.error(error));
+
+
+    console.log(body);
+
+    res.redirect('/admin');
     
 });
 

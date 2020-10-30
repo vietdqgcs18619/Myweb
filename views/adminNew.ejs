@@ -15,30 +15,44 @@
   <hr>
 
 
-  <h2>Admin</h2>
+  <h2>New a product Forms</h2>
 
   <div  >
-    <a href="/admin/new"><b>Add new product</b></a>
+    
+    <form action="/admin/new" action="sessions" method="POST">
+        <table > 
+            <tr>
+                <td>Product_Name</td>
+                <td><input type="text" id="product_name" name="Product_name" value="Name"></td>
+            </tr>
 
-    <table border="1px">
-        <tr>
-            <th>Product_Name</th>
-            <th>Product_Price</th>
-            <th>Product_Information</th>
-            <th>Product_img</th>
-            <th></th>
-            <th></th>
-        </tr>
+            <tr>
+                <td>Product_Price</td>
+                <td><input type="text" id="price" name="Price" value="Price"></td>
+            </tr>
 
-        <tr>
-            <td>name</td>
-            <td>Price</td>
-            <td>Infor</td>
-            <td>img</td>
-            <td><a href="##"> update </a></td>
-            <td><a href="##"> delete </a></td>
-        </tr>
-    </table>
+            <tr>
+                <td>Product_Information</td>
+                <td><input type="text" id="discription" name="Discription" value="Information"></td>
+            </tr>
+
+            <tr>
+                <td>Product_img</td>
+                <td><input type="text" id="product_image" name="Product_image" value="Link img"></td>
+            </tr>
+
+            <tr>
+                <td>Product_Inventory</td>
+                <td><input type="text" id="inventory" name="Inventory" value="Inventory"></td>
+            </tr>
+
+            <tr>
+                <td>Product_Revenue</td>
+                <td><input type="text" id="revenue" name="Revenue" value="Revenue"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+    </form>
   </div>
   
 
@@ -46,29 +60,6 @@
 
 
 
-
-
-    <div >
-      <% for (var i = 0; i < productlist.length; i++) { %>
-        <div>
-          <tr style="border-width: 5px;border-color: rgb(33, 158, 81);padding-bottom: 15px;">
-            <td>
-              <img width="150px" height="200px" src="<%= productlist[i].Product_image%>">
-            </td>
-            <td > 
-              <H3><%= productlist[i].Product_name %></H3>
-              <p><b>Price: </b>
-                              <%= productlist[i].Price%> </p>
-              
-              <p><b>Information: </b></p>                                
-              <p><%= productlist[i].Discription%> </p>
-              <button type="button" class="" onclick="themvao('<%= productlist[i]._id %>', '<%= productlist[i].Product_name %>', '<%= productlist[i].Price%>' )">Add</button>
-            </td>
-          </tr>
-                  <% } %>
-        </div>
-      
-    </div>
     
     <br> <br> <br> <br>
     <br> <br> <br> <br>

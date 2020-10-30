@@ -27,48 +27,22 @@
             <th>Product_Information</th>
             <th>Product_img</th>
             <th></th>
-            <th></th>
         </tr>
 
+        <% for (var i = 0; i < productlist.length; i++) { %>
         <tr>
-            <td>name</td>
-            <td>Price</td>
-            <td>Infor</td>
-            <td>img</td>
-            <td><a href="##"> update </a></td>
-            <td><a href="##"> delete </a></td>
+            <td><H3><%= productlist[i].Product_name %></H3></td>
+            <td><%= productlist[i].Price%></td>
+            <td><%= productlist[i].Discription%></td>
+            <td><img width="150px" height="200px" src="<%= productlist[i].Product_image%>"></td>
+            <td><button onclick="location.href='/admin/delete?product=<%= productlist[i]._id %>'" type="button"  >Delete</button></td>
         </tr>
+        <% } %>
     </table>
   </div>
   
-
+ 
   <br> <br> <br> <br>
-
-
-
-
-
-    <div >
-      <% for (var i = 0; i < productlist.length; i++) { %>
-        <div>
-          <tr style="border-width: 5px;border-color: rgb(33, 158, 81);padding-bottom: 15px;">
-            <td>
-              <img width="150px" height="200px" src="<%= productlist[i].Product_image%>">
-            </td>
-            <td > 
-              <H3><%= productlist[i].Product_name %></H3>
-              <p><b>Price: </b>
-                              <%= productlist[i].Price%> </p>
-              
-              <p><b>Information: </b></p>                                
-              <p><%= productlist[i].Discription%> </p>
-              <button type="button" class="" onclick="themvao('<%= productlist[i]._id %>', '<%= productlist[i].Product_name %>', '<%= productlist[i].Price%>' )">Add</button>
-            </td>
-          </tr>
-                  <% } %>
-        </div>
-      
-    </div>
     
     <br> <br> <br> <br>
     <br> <br> <br> <br>
