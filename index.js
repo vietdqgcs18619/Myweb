@@ -528,9 +528,14 @@ function insertdata(req,res)
   })
   .catch(error => console.error(error));
 
-  res.redirect("/");
+  res.redirect("/bill");
 }
 
+app.get('/bill', viewBill);
+function viewBill(req,res)
+{
+    res.render("bill")
+}
 
 
 app.set('views', path.join(__dirname, './views'));
