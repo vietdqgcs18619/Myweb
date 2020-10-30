@@ -8,28 +8,84 @@
 
 <!-----------------------------Body---------------------------------->
 <body>
-  <!-------------------------Menu------------------------------------>
-  <%- include('partials/menu') -%>
+  
+    <!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
 
-  <div class="row">
-    <%- include('partials/row-left') -%>
-
-    <div class="main" >
-      <h2>Văn hóa đại chúng nổi tiếng của Nhật Bản</h2>
-      <h5>Title description, Dec 7, 2020</h5>
-      <div class="fakeimg" style="height:200px;"><img width=auto height="150px" src="https://vyctravel.com/libs/upload/ckfinder/images/Nhat_Ban/anime%20nh%E1%BA%ADt%20b%E1%BA%A3n.png" alt=""></div>
-      <p>Văn hóa đại chúng nổi tiếng của Nhật Bản..</p>
-      <p>....</p>
-      <br>
-      <h2>Những bộ anime đáng xem nhất p1</h2>
-      <h5>Title description, Sep 2, 2019</h5>
-      <div class="fakeimg" style="height:200px;"><img width="auto" height="150px" src="https://motgame.vn/wp-content/uploads/2020/08/monster_vnsf/nhung-bo-anime-thich-hop-cho-game-thu-giai-tri-p-1-3.jpg" alt=""></div>
-      <p>..</p>
-      <p>Những bộ anime đáng xem nhất........</p>
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="https://ae01.alicdn.com/kf/H5e4c8d6d065e447b966d152f37bcad39a/Nh-t-B-n-DXF-Anime-One-Punch-Man-Gi-o-Vi-n-Saitama-Genos-PVC.jpg_q50.jpg" alt="Sandwich" style="width:100%">
+      <h3>Saitama</h3>
+      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://ae01.alicdn.com/kf/HTB1t7.DIb1YBuNjSszeq6yblFXaq.jpg_q50.jpg" alt="Steak" style="width:100%">
+      <h3>Goku</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://salt.tikicdn.com/media/catalog/product/9/1/9109178798977-001.u2683.d20160801.t153904.jpg" alt="Cherries" style="width:100%">
+      <h3>Conan</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+      <p>What else?</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://ae01.alicdn.com/kf/HTB1_idKaCSD3KVjSZFKq6z10VXaj/Dragon-Ball-Z-Si-u-Vegeta-H-nh-Ch-i-V-ng-Vegeta-M-H-nh.jpg_q50.jpg" alt="Pasta and Wine" style="width:100%">
+      <h3>Vegeta</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="https://i.pinimg.com/originals/2b/ab/56/2bab56a56785beb788d5601ecc67f649.jpg" alt="Popsicle" style="width:100%">
+      <h3>Luffy</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://cf.shopee.vn/file/139c57c186ebf8a7eb6b0e12dd97e7b0" alt="Salmon" style="width:100%">
+      <h3>Zoro</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://ae01.alicdn.com/kf/Hc9006a56dea1470e9058318ae1ec3125v/Anime-Naruto-Nh-n-V-t-Uzumaki-Naruto-Uchiha-Sasuke-Hatake-Kakashi-Grandista-S-u-T.jpg_q50.jpg" alt="Sandwich" style="width:100%">
+      <h3>Naruto</h3>
+      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://i.pinimg.com/originals/86/c3/ee/86c3ee74c889cae65b845b4f0109ae42.jpg" alt="Croissant" style="width:100%">
+      <h3>Jiraiya</h3>
+      <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
     </div>
   </div>
 
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <hr id="about">
 
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About Me, The Food Man</h3><br>
+    <img src="https://hstatic.net/630/1000124630/1000169630/image_banner_1.jpg?v=804" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <div class="w3-padding-32">
+      <h4><b>I am Who I Am!</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    </div>
+  </div>
+  <hr>
   
   
 
