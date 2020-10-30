@@ -537,6 +537,15 @@ function viewBill(req,res)
     res.render("bill")
 }
 
+app.get('/admin', viewAdmin);
+function viewAdmin(req,res)
+{
+    // res.render("admin")
+    blockPayment = 0 ;
+    arrBill = [];
+    responseDB(res, "admin",
+				Product, {}, {}, "productlist");
+}
 
 app.set('views', path.join(__dirname, './views'));
 app.listen(process.env.PORT || port, () => console.log("Example app listening at http://localhost:${port}"));
